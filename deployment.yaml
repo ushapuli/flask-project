@@ -14,10 +14,12 @@ spec:
     metadata:
       labels:
         app: flask
+
     spec:
       containers:
-        - name: flask
-          image: flask-app:latest
-          imagePullPolicy: Never
-          ports:
-            - containerPort: 5000
+      - name: flask
+        image: flask-app:latest
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 5000

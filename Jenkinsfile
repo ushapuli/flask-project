@@ -23,7 +23,7 @@ pipeline{
         }
 
         stage('Verify Deployment') {
-            stages{
+            steps{
                 bat 'kubectl get pods'
                 bat 'kubectl get services'
             }
