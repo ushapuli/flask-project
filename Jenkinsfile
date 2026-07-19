@@ -14,6 +14,13 @@ pipeline{
                 bat 'docker build -t flask-app:latest .'
             }
         }
+        stage('Check Kubernetes') {
+            steps {
+                bat 'whoami'
+                bat 'kubectl config current-context'
+                bat 'kubectl get nodes'
+            }
+        }
 
         stage('Deploy to kubernets') { 
             steps{
